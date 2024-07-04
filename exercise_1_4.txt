@@ -1,0 +1,5 @@
+docker run -d -it --name exercise14 ubuntu sh -c 'while true; do echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website; done'
+docker exec exercise14 apt-get update
+docker exec exercise14 apt-get -y install curl
+docker attach exercise14
+helsinki.fi
